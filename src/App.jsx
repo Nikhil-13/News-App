@@ -10,25 +10,13 @@ function App() {
 	return (
 		<div className='container'>
 			<header>
-				<h2 className='logo'>News App</h2>
 				<Navbar />
 			</header>
 			<main>
 				<NewsList />
 			</main>
-			<button
-				className='find-more'
-				onClick={() => setPageSize(pageSize + 4)}
-				style={{
-					borderRadius: '50%',
-					height: '50px',
-					width: '50px',
-					display: 'block',
-					color: 'var(--background)',
-					background: 'var(--accent)',
-					marginInline: 'auto',
-				}}>
-				I
+			<button className='read-more' onClick={() => setPageSize(pageSize + 4)}>
+				&#8595;
 			</button>
 		</div>
 	)

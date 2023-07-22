@@ -9,7 +9,7 @@ export const NewsContextProvider = ({ children }) => {
 	const [props, setProps] = useState({
 		country: 'in',
 		category: 'general',
-		page_size: 8,
+		page_size: 8 + pageSize,
 	})
 
 	useEffect(() => {
