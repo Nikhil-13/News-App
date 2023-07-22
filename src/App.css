@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+:root {
+	--text: #fafafa;
+	--background: #03060c;
+	--primary: #32c5f5;
+	--secondary: #022531;
+	--accent: #6dd5f8;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--text: #050505;
+		--background: #f1f1f1;
+		--primary: #32c5f5;
+		--secondary: #cef1fd;
+		--accent: #0cb9f3;
+	}
+}
+
+html {
+	color-scheme: light dark;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	background-color: var(--background);
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+	display: block;
+}
+
+h1 {
+	font-size: clamp();
+	text-wrap: balance;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	max-width: 90dvw;
+	gap: 1rem;
+	padding: 1rem;
+	/* border: 1px solid red; */
+	margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	/* all your animations goes here */
+}
+
+@media (prefers-reduced-motion: reduced) {
+	*,
+	*::after,
+	*::before {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+@media (width<=426px) {
+	.navbar {
+		min-width: 100%;
+	}
+	.nav-list {
+		display: none;
+	}
+
+	.nav-list.active {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		z-index: 5;
+	}
+	.nav-list li {
+		min-width: 100%;
+		margin: 1rem auto;
+	}
+
+	.ham-menu {
+	}
+
+	main {
+		width: 100%;
+		padding: 1rem 0.5rem;
+	}
+
+	.news-item {
+		min-width: 100%;
+	}
+}
+
+@media (768px>width<1024px) {
+	/* for tablets */
+}
+
+@media (width>=1024px) {
+	/* for desktops and laptops */
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
