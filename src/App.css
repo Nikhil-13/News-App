@@ -1,13 +1,15 @@
 *,
 *::after,
-*::before {
+*::before
+{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
 
-:root {
+:root
+{
 	--text: #fafafa;
 	--background: #03060c;
 	--primary: #32c5f5;
@@ -15,8 +17,10 @@
 	--accent: #6dd5f8;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
+@media (prefers-color-scheme: light)
+{
+	:root
+	{
 		--text: #050505;
 		--background: #f1f1f1;
 		--primary: #32c5f5;
@@ -25,11 +29,13 @@
 	}
 }
 
-html {
+html
+{
 	color-scheme: light dark;
 }
 
-body {
+body
+{
 	font-family: system-ui, sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -38,22 +44,27 @@ body {
 
 img,
 svg,
-video {
+video
+{
 	max-width: 100%;
 	display: block;
 }
 
-h1 {
+h1
+{
 	font-size: clamp();
 	text-wrap: balance;
 }
-.container {
+
+.container
+{
 	width: 100%;
 	display: grid;
 	place-items: center;
 }
 
-main {
+main
+{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -63,7 +74,9 @@ main {
 	padding: 1rem;
 	margin-inline: auto;
 }
-header {
+
+header
+{
 	/* background-color: var(--accent); */
 	width: 100%;
 	/* max-height: 50px; */
@@ -72,14 +85,18 @@ header {
 	box-shadow: 0px 5px 5px rgb(7, 7, 7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference)
+{
 	/* all your animations goes here */
 }
 
-@media (prefers-reduced-motion: reduced) {
+@media (prefers-reduced-motion: reduced)
+{
+
 	*,
 	*::after,
-	*::before {
+	*::before
+	{
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
@@ -87,35 +104,45 @@ header {
 	}
 }
 
-.navbar {
+.navbar
+{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	width: 100%;
 	/* background-color: red; */
 	padding: 5px 10px;
 }
 
-.sub-nav {
+.sub-nav
+{
 	padding: 0.25rem 1rem;
 	width: 70%;
 }
+
 .navbar .sub-nav,
-.sub-nav ul {
+.sub-nav ul
+{
 	display: inherit;
 	gap: 1rem;
 	align-items: baseline;
 }
-.sub-nav ul li {
+
+.sub-nav ul li
+{
 	font-size: 1.2rem;
 	font-weight: 500;
 	padding: 0.2rem 0.5rem;
 	transition: all 0.5s ease;
 }
-.sub-nav ul li:hover {
+
+.sub-nav ul li:hover
+{
 	background-color: var(--background);
 	filter: invert();
 }
-.read-more {
+
+.read-more
+{
 	height: 50px;
 	width: 50px;
 	font-size: larger;
@@ -128,41 +155,83 @@ header {
 	border-radius: 50%;
 }
 
-.ham-menu {
-	display: flex;
+.ham-menu
+{
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	cursor: pointer;
 	padding: 5px 10px;
 	z-index: 1;
 }
-.ham-menu .line {
+
+.ham-menu .line
+{
 	width: 30px;
 	height: 3px;
 	background-color: #fff;
 	margin: 4px;
 }
 
-@media (width<=426px) {
-	main {
+@media (width<=426px)
+{
+	main
+	{
 		width: 100%;
 		padding: 1rem 0.5rem;
 	}
 
-	.news-item {
+	.news-item
+	{
 		min-width: 100%;
 	}
+
+	.navbar
+	{
+		position: relative;
+		width: 100%;
+		max-height: 50px;
+		background-color: #0cb9f3;
+		overflow: visible;
+	}
+
+	.sub-nav
+	{
+		justify-content: space-between;
+		min-height: 100vh;
+		min-width: 70vw;
+		border: 5px solid red;
+		translate: 100% 0;
+		position: relative;
+	}
+
+	.sub-nav ul
+	{
+		position: absolute;
+		flex-direction: column;
+		background-color: brown;
+	}
+
+	.ham-menu
+	{
+		position: absolute;
+		display: flex;
+		right: 0;
+	}
+
 }
 
-@media (768px>width<1024px) {
+@media (768px>width<1024px)
+{
 	/* for tablets */
 }
 
-@media (width>=1024px) {
+@media (width>=1024px)
+{
 	/* for desktops and laptops */
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
 	display: none;
 }
-

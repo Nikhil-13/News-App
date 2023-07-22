@@ -5,10 +5,10 @@ function Navbar() {
 	const { props, setProps } = useContext(NewsContext)
 	return (
 		<nav className='navbar'>
+			<div className='logo'>
+				<h2>NewsApp</h2>
+			</div>
 			<div className='sub-nav'>
-				<div className='logo'>
-					<h2>NewsApp</h2>
-				</div>
 				<ul className='nav-list'>
 					<li
 						onClick={() => {
@@ -42,7 +42,7 @@ function Navbar() {
 					</li>
 				</ul>
 			</div>
-			<div className='ham-menu' style={{ border: '1px solid white' }}>
+			<div className='ham-menu'>
 				<span className='line line1'></span>
 				<span className='line line2'></span>
 				<span className='line line3'></span>
