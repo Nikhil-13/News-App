@@ -13,7 +13,7 @@ export const NewsContextProvider = ({ children }) => {
 	})
 
 	useEffect(() => {
-		// fetchData()
+		fetchData()
 	}, [props, pageSize])
 
 	const fetchData = async () => {

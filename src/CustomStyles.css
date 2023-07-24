@@ -1,40 +1,47 @@
-.news-item {
+.news-item
+{
 	/* max-width: 300px; */
 	max-width: 30ch;
 	background-color: var(--text);
 	filter: drop-shadow(0px 0px 5px #00000092);
 }
 
-.news-item a {
+.news-item a
+{
 	text-decoration: none;
 }
 
-.content {
+.content
+{
 	padding: 0.5rem 0.7rem;
 }
 
-.image {
+.image
+{
 	object-fit: cover;
 	width: 100%;
 	max-height: 250px;
 	aspect-ratio: 16/12;
 }
 
-.title {
+.title
+{
 	color: var(--background);
 	font-size: 1.125rem;
 	line-height: 1.75rem;
 	font-weight: 600;
 }
 
-.desc {
+.desc
+{
 	margin-top: 0.5rem;
 	color: var(--background);
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 }
 
-.find-more {
+.find-more
+{
 	display: inline-flex;
 	margin-top: 1rem;
 	color: var(--text);
@@ -50,10 +57,12 @@
 	outline: 0;
 }
 
-.find-more span {
+.find-more span
+{
 	transition: 0.3s ease;
 }
 
-.find-more:hover span {
+.find-more:hover span
+{
 	transform: translateX(4px);
 }

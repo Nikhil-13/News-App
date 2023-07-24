@@ -5,48 +5,58 @@ function Navbar() {
 	const { props, setProps } = useContext(NewsContext)
 	return (
 		<nav className='navbar'>
-			<div className='logo'>
-				<h2>NewsApp</h2>
-			</div>
-			<div className='sub-nav'>
-				<ul className='nav-list'>
-					<li
-						onClick={() => {
-							setProps({
-								country: props.country,
-								category: 'business',
-								page_size: props.page_size,
-							})
-						}}>
-						Business
-					</li>
-					<li
-						onClick={() => {
-							setProps({
-								country: props.country,
-								category: 'technology',
-								page_size: props.page_size,
-							})
-						}}>
-						Technology
-					</li>
-					<li
-						onClick={() => {
-							setProps({
-								country: props.country,
-								category: 'sports',
-								page_size: props.page_size,
-							})
-						}}>
-						Sports
-					</li>
-				</ul>
-			</div>
-			<div className='ham-menu'>
-				<span className='line line1'></span>
-				<span className='line line2'></span>
-				<span className='line line3'></span>
-			</div>
+			<ul className='nav-list'>
+				<li
+					onClick={() => {
+						setProps({
+							country: props.country,
+							category: 'business',
+							page_size: props.page_size,
+						})
+					}}>
+					Business
+				</li>
+				<li
+					onClick={() => {
+						setProps({
+							country: props.country,
+							category: 'entertainment',
+							page_size: props.page_size,
+						})
+					}}>
+					Entertainment
+				</li>
+				<li
+					onClick={() => {
+						setProps({
+							country: props.country,
+							category: 'technology',
+							page_size: props.page_size,
+						})
+					}}>
+					Technology
+				</li>
+				<li
+					onClick={() => {
+						setProps({
+							country: props.country,
+							category: 'health',
+							page_size: props.page_size,
+						})
+					}}>
+					Health
+				</li>
+				<li
+					onClick={() => {
+						setProps({
+							country: props.country,
+							category: 'sports',
+							page_size: props.page_size,
+						})
+					}}>
+					Sports
+				</li>
+			</ul>
 		</nav>
 	)
 }
