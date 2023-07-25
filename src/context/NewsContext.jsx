@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from 'react'
 const NewsContext = createContext()
 
 export const NewsContextProvider = ({ children }) => {
-	const api_key = 'd61e9b49b4264acda7e6f157a6a00a4c'
+	const api_key = import.meta.env.VITE_API_KEY
 	const [news, setNews] = useState('')
 	const [pageSize, setPageSize] = useState(0)
 	const [props, setProps] = useState({

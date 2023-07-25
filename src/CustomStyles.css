@@ -66,3 +66,8 @@
 {
 	transform: translateX(4px);
 }
+
+li
+{
+	cursor: pointer;
+}
